@@ -11,7 +11,7 @@ from wtforms.validators import Required
 
 class LoginForm(Form):
     username = TextField('username',validators = [Required()])
-    password = PasswordField('username',validators = [Required()])
+    password = PasswordField('password',validators = [Required()])
 
     def validate_on_submit(self,uname,pwd):
         conn = MySQLdb.connect('127.0.0.1','root','1234','test')
